@@ -8,10 +8,10 @@ train_num = int(train_ratio*len(samples))
 train_samples = random.sample(samples,train_num)
 val_samples = [i for i in samples if i not in train_samples]
 
-with open('train.txt',mode='r') as train:
+with open('train.txt',mode='w') as train:
     train.writelines(train_samples)
     train.close()
     
-with open('val.txt',mode='r') as val:
+with open('val.txt',mode='w') as val:
     val.writelines(val_samples)
     val.close()
